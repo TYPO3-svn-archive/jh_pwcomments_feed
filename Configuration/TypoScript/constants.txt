@@ -1,0 +1,34 @@
+## Define custom categories
+# customsubcategory=options=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.subcat.options
+# customsubcategory=numbers=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.subcat.numbers
+# customsubcategory=feed=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.subcat.feed
+
+# cat=plugin.tx_jhpwcommentsfeed/options/010; type=options[Rss091,Rss2,Atom1]; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.feedtype
+plugin.tx_jhpwcommentsfeed.feedtype = Rss2
+
+# cat=plugin.tx_jhpwcommentsfeed/numbers/020; type=int+; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.typenum
+plugin.tx_jhpwcommentsfeed.typenum = 40614
+
+# cat=plugin.tx_jhpwcommentsfeed/feed/100; type=string; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.feed.title
+plugin.tx_jhpwcommentsfeed.feed.title = Feed-title
+
+# cat=plugin.tx_jhpwcommentsfeed/feed/110; type=string; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.feed.link
+plugin.tx_jhpwcommentsfeed.feed.link = http://your-domain.tld/
+
+# cat=plugin.tx_jhpwcommentsfeed/feed/120; type=string; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.feed.description
+plugin.tx_jhpwcommentsfeed.feed.description = Description of your feed
+
+# cat=plugin.tx_jhpwcommentsfeed/feed/130; type=string; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.feed.language
+plugin.tx_jhpwcommentsfeed.feed.language = en-us
+
+# cat=plugin.tx_jhpwcommentsfeed/feed/140; type=string; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.feed.copyright
+plugin.tx_jhpwcommentsfeed.feed.copyright =
+
+# cat=plugin.tx_jhpwcommentsfeed/feed/150; type=string; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.feed.category
+plugin.tx_jhpwcommentsfeed.feed.category =
+
+# cat=plugin.tx_jhpwcommentsfeed/feed/160; type=string; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.feed.author.name
+plugin.tx_jhpwcommentsfeed.feed.author.name =
+
+# cat=plugin.tx_jhpwcommentsfeed/feed/170; type=string; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.feed.author.email
+plugin.tx_jhpwcommentsfeed.feed.author.email =

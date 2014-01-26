@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin "tx_jhpwcommentsfeed"</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<!-- constants -->
+			<label index="constants.subcat.options">Options</label>
+			<label index="constants.subcat.numbers">Numbers</label>
+			<label index="constants.subcat.feed">Feed</label>
+
+			<label index="constants.feedtype">Feed: Select feed</label>
+			<label index="constants.typenum">TypeNum: TypeNum of feed</label>
+
+			<label index="constants.feed.title">Title: Title of your feed</label>
+			<label index="constants.feed.link">Link/id: Link to the HTML website corresponding to the feed (Id in Atom1) (ending with /)</label>
+			<label index="constants.feed.description">Description: Description of your feed (RSS only)</label>
+			<label index="constants.feed.language">Language: Language of your feed (RSS only)</label>
+			<label index="constants.feed.copyright">Copyright/rights: Copyright (Rights in Atom1) (optional)</label>
+			<label index="constants.feed.category">Category: Category of the feed (Rss2 and Atom1 only) (optional)</label>
+			<label index="constants.feed.author.name">Author name: Name of the feed author (Atom1 only) (optional)</label>
+			<label index="constants.feed.author.email">Author email: Email of the feed author (Atom1 only) (optional)</label>
+
+			<!-- link to feed -->
+			<label index="link.starting">Comments as</label>
+			<label index="link.Rss091">RSS 0.91 feed</label>
+			<label index="link.Rss2">RSS 2.0 feed</label>
+			<label index="link.Atom1">Atom feed</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<!-- constants -->
+			<label index="constants.subcat.options">Optionen</label>
+			<label index="constants.subcat.numbers">Zahlen</label>
+			<label index="constants.subcat.feed">Feed</label>
+
+			<label index="constants.feedtype">Feed: Feed auswählen</label>
+			<label index="constants.typenum">TypeNum: TypeNum des Feeds</label>
+
+			<label index="constants.feed.title">Title: Titel des Feeds</label>
+			<label index="constants.feed.link">Link/id: Link zur HTML Website des zugehörigen Feeds (Id in Atom1) (endend mit /)</label>
+			<label index="constants.feed.description">Description: Beschreibung des Feeds (nur RSS)</label>
+			<label index="constants.feed.language">Language: Sprache des Feeds (nur RSS)</label>
+			<label index="constants.feed.copyright">Copyright/rights: Copyright (Rights in Atom1) (optional)</label>
+			<label index="constants.feed.category">Category: Kategorie des Geeds (nur Rss2 und Atom) (optional)</label>
+			<label index="constants.feed.author.name">Author name: Name des Feed-Autors (nur Atom1) (optional)</label>
+			<label index="constants.feed.author.email">Author email: Email des Feed-Autors (nur Atom1) (optional)</label>
+
+			<!-- link to feed -->
+			<label index="link.starting">Kommentare als</label>
+			<label index="link.Rss091">RSS 0.91 Feed</label>
+			<label index="link.Rss2">RSS 2.0 Feed</label>
+			<label index="link.Atom1">Atom Feed</label>
+		</languageKey>
+	</data>
+</T3locallang>

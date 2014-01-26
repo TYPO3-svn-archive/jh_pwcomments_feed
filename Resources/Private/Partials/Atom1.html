@@ -1,0 +1,38 @@
+{namespace j=Tx_JhPwcommentsFeed_ViewHelpers}
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>{settings.atom.title}</title>
+	<id>{settings.atom.id}</id>
+	<updated><j:date format="Y-m-d\TH:i:s\Z" currentDate="1" strftime="0" /></updated>
+	<f:if condition="{settings.atom.author.name}">
+		<author>
+			<name>{settings.atom.author.name}</name>
+			<f:if condition="{settings.atom.author.email}">
+				<email>{settings.atom.author.email}</email>
+			</f:if>
+		</author>
+	</f:if>
+	<link href="{j:link(absolute:'1' URIonly:'TRUE' additionalParams:{type:'40614'})}" rel="self" />
+	<generator>{settings.atom.generator}</generator>
+	<f:if condition="{settings.atom.rights}">
+		<rights>{settings.atom.rights}</rights>
+	</f:if>
+	<f:if condition="{settings.atom.category}">
+		<category term ="{settings.atom.category}"/>
+	</f:if>
+
+	<f:if condition="{f:count(subject:'{comments}')} > 0">
+		<f:for each="{comments}" as="comment">
+			<entry>
+				<title>{f:if(condition: '{comment.author}', then: '{comment.author.username}', else: '{comment.authorName}')}</title>
+				<link href="{j:link(absolute:'0' section:'comment{comment.uid}' URIonly:'TRUE')}"/>
+				<id><j:link absolute="1" section="comment{comment.uid}" URIonly="TRUE"/></id>
+				<updated><j:date timestamp="{comment.crdate}" format="Y-m-d\TH:i:s\Z" strftime="0" /></updated>
+				<author>
+					<name>{f:if(condition: '{comment.author}', then: '{comment.author.username}', else: '{comment.authorName}')}</name>
+				</author>
+				<content type="html"><f:format.cdata><f:format.nl2br>{comment.message}</f:format.nl2br></f:format.cdata></content>
+			</entry>
+		</f:for>
+	</f:if>
+</feed>

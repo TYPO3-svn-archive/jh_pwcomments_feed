@@ -1,0 +1,31 @@
+{namespace j=Tx_JhPwcommentsFeed_ViewHelpers}
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{settings.rss.title}</title>
+		<link>{settings.rss.link}</link>
+		<description>{settings.rss.description}</description>
+		<language>{settings.rss.language}</language>
+		<f:if condition="{settings.rss.copyright}">
+			<copyright>{settings.rss.copyright}</copyright>
+		</f:if>
+		<pubDate><j:date format="%a, %d %b %Y %T %z" currentDate="1" strftime="1" /></pubDate>
+		<lastBuildDate><j:date format="%a, %d %b %Y %T %z" currentDate="1" strftime="1" /></lastBuildDate>
+		<f:if condition="{settings.rss.category}">
+			<category>{settings.rss.category}</category>
+		</f:if>
+		<generator>{settings.rss.generator}</generator>
+		<atom:link href="{j:link(absolute:'1' URIonly:'TRUE' additionalParams:{type:settings.general.typenum})}" rel="self" type="application/rss+xml" />
+		<f:if condition="{f:count(subject:'{comments}')} > 0">
+			<f:for each="{comments}" as="comment">
+				<item>
+					<guid isPermaLink="false">pw_comments-{comment.uid}</guid>
+					<pubDate><j:date timestamp="{comment.crdate}" format="%a, %d %b %Y %T %z"/></pubDate>
+					<title>{f:if(condition: '{comment.author}', then: '{comment.author.username}', else: '{comment.authorName}')}</title>
+					<link><j:link absolute="1" section="comment{comment.uid}" URIonly="TRUE"/></link>
+					<description><f:format.cdata><f:format.nl2br>{comment.message}</f:format.nl2br></f:format.cdata></description>
+				</item>
+			</f:for>
+		</f:if>
+	</channel>
+</rss>

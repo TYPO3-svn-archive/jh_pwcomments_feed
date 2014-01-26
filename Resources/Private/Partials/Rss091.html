@@ -1,0 +1,24 @@
+{namespace j=Tx_JhPwcommentsFeed_ViewHelpers}
+
+<rss version="0.91">
+	<channel>
+		<title>{settings.rss.title}</title>
+		<link>{settings.rss.link}</link>
+		<description>{settings.rss.description}</description>
+		<language>{settings.rss.language}</language>
+		<f:if condition="{settings.rss.copyright}">
+			<copyright>{settings.rss.copyright}</copyright>
+		</f:if>
+		<pubDate><j:date format="%a, %d %b %Y %T %z" currentDate="1" strftime="1" /></pubDate>
+		<lastBuildDate><j:date format="%a, %d %b %Y %T %z" currentDate="1" strftime="1" /></lastBuildDate>
+		<f:if condition="{f:count(subject:'{comments}')} > 0">
+			<f:for each="{comments}" as="comment">
+				<item>
+					<title>{f:if(condition: '{comment.author}', then: '{comment.author.username}', else: '{comment.authorName}')}</title>
+					<link><j:link absolute="1" section="comment{comment.uid}" URIonly="TRUE"/></link>
+					<description><f:format.cdata><f:format.htmlentitiesDecode keepQuotes="FALSE" encoding="utf-8"><f:format.nl2br>{comment.message}</f:format.nl2br></f:format.htmlentitiesDecode></f:format.cdata></description>
+				</item>
+			</f:for>
+		</f:if>
+	</channel>
+</rss>
