@@ -25,6 +25,7 @@
 /**
  * ViewHelper to format a date, using strftime
  * Taken from EXT:news
+ * Modified (c) 2014 Jonathan Heilmann <mail@jonathan-heilmann.de>
  *
  * @package TYPO3
  * @subpackage tx_jhpwcommentsfeed
