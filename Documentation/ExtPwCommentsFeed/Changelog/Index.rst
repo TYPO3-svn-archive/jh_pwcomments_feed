@@ -30,6 +30,15 @@ ChangeLog
 .. container:: table-row
 
    Version
+         0.0.2
+
+   Changes
+         \* Added ReST documentation
+
+
+.. container:: table-row
+
+   Version
          0.0.1
 
    Changes
