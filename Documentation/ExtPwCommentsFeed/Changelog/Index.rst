@@ -30,10 +30,19 @@ ChangeLog
 .. container:: table-row
 
    Version
+         0.0.3
+
+   Changes
+         - Fixed violations listed by metrics.typo3.org
+
+
+.. container:: table-row
+
+   Version
          0.0.2
 
    Changes
-         \* Added ReST documentation
+         - Added ReST documentation
 
 
 .. container:: table-row
@@ -42,7 +51,7 @@ ChangeLog
          0.0.1
 
    Changes
-         \* Initial release
+         - Initial release
 
 
 .. ###### END~OF~TABLE ######

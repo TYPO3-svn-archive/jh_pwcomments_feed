@@ -61,9 +61,32 @@ class Tx_JhPwcommentsFeed_ViewHelpers_LinkViewHelper extends Tx_Fluid_ViewHelper
 	 *	@param boolean $URIonly
 	 * @return string Rendered page URI
 	 */
-	public function render($pageUid = NULL, array $additionalParams = array(), $pageType = 0, $noCache = FALSE, $noCacheHash = FALSE, $section = '', $linkAccessRestrictedPages = FALSE, $absolute = FALSE, $addQueryString = FALSE, array $argumentsToBeExcludedFromQueryString = array(), $URIonly = FALSE) {
+	public function render(
+		$pageUid = NULL,
+		array $additionalParams = array(),
+		$pageType = 0,
+		$noCache = FALSE,
+		$noCacheHash = FALSE,
+		$section = '',
+		$linkAccessRestrictedPages = FALSE,
+		$absolute = FALSE,
+		$addQueryString = FALSE,
+		array $argumentsToBeExcludedFromQueryString = array(),
+		$URIonly = FALSE
+	) {
 		$uriBuilder = $this->controllerContext->getUriBuilder();
-		$uri = $uriBuilder->reset()->setTargetPageUid($pageUid)->setTargetPageType($pageType)->setNoCache($noCache)->setUseCacheHash(!$noCacheHash)->setSection($section)->setLinkAccessRestrictedPages($linkAccessRestrictedPages)->setArguments($additionalParams)->setCreateAbsoluteUri($absolute)->setAddQueryString($addQueryString)->setArgumentsToBeExcludedFromQueryString($argumentsToBeExcludedFromQueryString)->build();
+		$uri = $uriBuilder->reset()
+			->setTargetPageUid($pageUid)
+			->setTargetPageType($pageType)
+			->setNoCache($noCache)
+			->setUseCacheHash(!$noCacheHash)
+			->setSection($section)
+			->setLinkAccessRestrictedPages($linkAccessRestrictedPages)
+			->setArguments($additionalParams)
+			->setCreateAbsoluteUri($absolute)
+			->setAddQueryString($addQueryString)
+			->setArgumentsToBeExcludedFromQueryString($argumentsToBeExcludedFromQueryString)
+			->build();
 		if (strlen($uri) && !$URIonly) {
 			$this->tag->addAttribute('href', $uri);
 			$this->tag->setContent($this->renderChildren());

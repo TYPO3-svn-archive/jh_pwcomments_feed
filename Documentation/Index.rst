@@ -17,16 +17,16 @@ EXT: pw\_comments feed
 ======================
 
 :Created:
-      2010-02-18 17::3:3:
+      2010-02-18 17-3-3
 
 :Changed:
-      2014-01-26 20::4:9:
+      2014-01-29 20-43-9
 
 :Classification:
       jh_pwcomments_feed
 
 :Keywords:
-      pw_comments, pwComments, feed, rss, rss2, rss091, atom1
+      pw_comments, pwComments, feed, rss, rss2, rss091, atom, atom11
 
 :Author:
       Jonathan Heilmann
@@ -40,11 +40,14 @@ EXT: pw\_comments feed
 :Language:
       en
 
+.. figure:: Images/line.gif
+   :alt: line
+
 .. figure:: Images/typo3.png
    :alt: TYPO3 CMS Logo
    :height: 21
    :width: 87
-EXT: pw\_comments feed -jh\_pwcomments\_feedChangeLog
+EXT: pw\_comments feed -jh\_pwcomments\_feed
 
 
 .. toctree::
