@@ -22,17 +22,19 @@
 	</f:if>
 
 	<f:if condition="{f:count(subject:'{comments}')} > 0">
-		<f:for each="{comments}" as="comment">
-			<entry>
-				<title>{f:if(condition: '{comment.author}', then: '{comment.author.username}', else: '{comment.authorName}')}</title>
-				<link href="{j:link(absolute:'0' section:'comment{comment.uid}' URIonly:'TRUE')}"/>
-				<id><j:link absolute="1" section="comment{comment.uid}" URIonly="TRUE"/></id>
-				<updated><j:date timestamp="{comment.crdate}" format="Y-m-d\TH:i:s\Z" strftime="0" /></updated>
-				<author>
-					<name>{f:if(condition: '{comment.author}', then: '{comment.author.username}', else: '{comment.authorName}')}</name>
-				</author>
-				<content type="html"><f:format.cdata><f:format.nl2br>{comment.message}</f:format.nl2br></f:format.cdata></content>
-			</entry>
+		<f:for each="{comments}" as="comment" iteration="iterator">
+			<f:if condition="{iterator.index} <= {settings.general.records}">
+				<entry>
+					<title>{f:if(condition: '{comment.author}', then: '{comment.author.username}', else: '{comment.authorName}')}</title>
+					<link href="{j:link(absolute:'0' section:'comment{comment.uid}' URIonly:'TRUE')}"/>
+					<id><j:link absolute="1" section="comment{comment.uid}" URIonly="TRUE"/></id>
+					<updated><j:date timestamp="{comment.crdate}" format="Y-m-d\TH:i:s\Z" strftime="0" /></updated>
+					<author>
+						<name>{f:if(condition: '{comment.author}', then: '{comment.author.username}', else: '{comment.authorName}')}</name>
+					</author>
+					<content type="html"><f:format.cdata><f:format.nl2br>{comment.message}</f:format.nl2br></f:format.cdata></content>
+				</entry>
+			</f:if>
 		</f:for>
 	</f:if>
 </feed>
