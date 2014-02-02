@@ -34,6 +34,8 @@ ChangeLog
 
    Changes
          - Fixed violations listed by metrics.typo3.org
+         - Added cache_period to constants
+         - Limited number or comments within the feed
 
 
 .. container:: table-row

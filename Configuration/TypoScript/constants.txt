@@ -9,6 +9,12 @@ plugin.tx_jhpwcommentsfeed.feedtype = Rss2
 # cat=plugin.tx_jhpwcommentsfeed/numbers/020; type=int+; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.typenum
 plugin.tx_jhpwcommentsfeed.typenum = 40614
 
+# cat=plugin.tx_jhpwcommentsfeed/numbers/030; type=int+; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.cache_period
+plugin.tx_jhpwcommentsfeed.cache_period = 1800
+
+# cat=plugin.tx_jhpwcommentsfeed/numbers/040; type=int+; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.records
+plugin.tx_jhpwcommentsfeed.records = 20
+
 # cat=plugin.tx_jhpwcommentsfeed/feed/100; type=string; label=LLL:EXT:jh_pwcomments_feed/Resources/Private/Language/locallang.xml:constants.feed.title
 plugin.tx_jhpwcommentsfeed.feed.title = Feed-title
 

@@ -14,6 +14,8 @@
 
 			<label index="constants.feedtype">Feed: Select feed</label>
 			<label index="constants.typenum">TypeNum: TypeNum of feed</label>
+			<label index="constants.cache_period">cache_period: The number of second the feed is remained in cache</label>
+			<label index="constants.records">Records: Number of comments within the feed</label>
 
 			<label index="constants.feed.title">Title: Title of your feed</label>
 			<label index="constants.feed.link">Link/id: Link to the HTML website corresponding to the feed (Id in Atom1) (ending with /)</label>

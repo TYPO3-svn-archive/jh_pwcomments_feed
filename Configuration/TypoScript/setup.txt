@@ -14,6 +14,7 @@ jh_pwcomments_feed {
 		locale_all = en
 		additionalHeaders = Content-type:application/rss+xml
 		xhtml_cleaning = 0
+		cache_period = {$plugin.tx_jhpwcommentsfeed.cache_period}
 
 		# Remove header
 		disableAllHeaderCode = 1
@@ -34,6 +35,7 @@ jh_pwcomments_feed {
 			general {
 				feedtype = {$plugin.tx_jhpwcommentsfeed.feedtype}
 				typenum = {$plugin.tx_jhpwcommentsfeed.typenum}
+				records = {$plugin.tx_jhpwcommentsfeed.records}
 			}
 			rss {
 				title = {$plugin.tx_jhpwcommentsfeed.feed.title}

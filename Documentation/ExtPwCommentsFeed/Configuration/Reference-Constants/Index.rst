@@ -64,6 +64,36 @@ Reference - Constants
          40614
 
 
+.. container:: table-row
+
+   Property
+         cache_period
+
+   Data type
+         int+
+
+   Description
+         The number of second the feed is remained in cache
+
+   Default
+         1800
+
+
+.. container:: table-row
+
+   Property
+         records
+
+   Data type
+         int+
+
+   Description
+         Number of comments within the feed
+
+   Default
+         20
+
+
 .. ###### END~OF~TABLE ######
 
 [tsref:plugin.tx\_jhpwcommentsfeed]
