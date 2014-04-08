@@ -11,7 +11,7 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'pw_comments feed',
+	'title' => 'pwComments feed',
 	'description' => 'RSS- and Atom-Feed for EXT:pw_comments',
 	'category' => 'plugin',
 	'author' => 'Jonathan Heilmann',
@@ -27,7 +27,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'modify_tables' => '',
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
-	'version' => '0.0.3',
+	'version' => '0.0.4',
 	'constraints' => array(
 		'depends' => array(
 			'extbase' => '1.3',
